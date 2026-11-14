@@ -29,7 +29,7 @@ Every repository in the GND-0 org follows these standards, so anyone can open an
 | Description and topics | Set on the repo page. Topics: domain (`rtl`, `verification`, `physical-design`, `analog`, `fpga`, `learning`, `website`) plus tech (`verilog`, `systemverilog`, `cocotb`, `sky130`, `librelane`...) |
 | `.gitignore` | Must exclude build output, waveforms, flow `runs/`, `.env*` |
 | CI | GitHub Actions running at least lint + tests (hardware repos get this from the template) |
-| Ruleset on `main` | PR required, 1 approval, no force-push, no deletion, CI must pass |
+| Ruleset on `main` | PR required (authors can merge their own), no force-push, no deletion; don't merge with failing CI |
 | Maintainer | At least one, listed in [MAINTAINERS.md](MAINTAINERS.md) |
 
 Community health files (Code of Conduct, Contributing, Security, Support, issue and PR templates) are **inherited automatically** from [`GND-0/.github`](https://github.com/GND-0/.github). Only add them to a repo if it needs something different.
