@@ -1,0 +1,16 @@
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What did you build or learn?
+      description: Designs, waveforms, layouts, FPGA demos, blog posts, internship learnings (no NDA material!)
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link (repo, video, post)
+  - type: textarea
+    id: lessons
+    attributes:
+      label: What was hard, and what would you tell someone attempting it?

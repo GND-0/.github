@@ -1,0 +1,53 @@
+name: 📦 New repository request
+description: Request a new org repository for an approved project (after a Project Proposal discussion).
+title: "[Repo]: "
+labels: ["type: repo request", "status: needs triage"]
+body:
+  - type: input
+    id: proposal
+    attributes:
+      label: Link to the approved Project Proposal discussion
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Proposed repository name
+      description: Lowercase-kebab-case with a domain prefix; see docs/REPO_STANDARDS.md
+      placeholder: "rtl-uart-controller"
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: One-line description
+    validations:
+      required: true
+  - type: dropdown
+    id: template
+    attributes:
+      label: Start from
+      options:
+        - rtl-project-template (hardware projects)
+        - Empty repository
+        - Transfer an existing repository from my account
+    validations:
+      required: true
+  - type: textarea
+    id: maintainers
+    attributes:
+      label: Maintainers (at least one, ideally two)
+      placeholder: "@handle1, @handle2"
+    validations:
+      required: true
+  - type: dropdown
+    id: license
+    attributes:
+      label: License
+      options:
+        - Apache-2.0 (recommended for hardware and code)
+        - MIT
+        - CERN-OHL-S-2.0 (strongly reciprocal open hardware)
+        - CC-BY-4.0 (docs and learning material)
+    validations:
+      required: true

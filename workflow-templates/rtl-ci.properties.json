@@ -1,0 +1,7 @@
+{
+  "name": "GND_0 RTL CI",
+  "description": "Lint (Verilator), simulate (Icarus + cocotb) and synthesise (Yosys) a Verilog/SystemVerilog project that follows the rtl-project-template Makefile.",
+  "iconName": "octicon cpu",
+  "categories": ["Verilog", "SystemVerilog"],
+  "filePatterns": ["Makefile$", ".*\\.sv$", ".*\\.v$"]
+}

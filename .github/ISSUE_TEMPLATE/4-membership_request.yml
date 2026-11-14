@@ -1,0 +1,65 @@
+name: 🙋 Membership request
+description: IIIT Dharwad students, request to join the GND-0 GitHub organisation.
+title: "[Membership]: @"
+labels: ["type: membership"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Welcome! 🎉 Please make sure you've read the [Code of Conduct](https://github.com/GND-0/.github/blob/main/CODE_OF_CONDUCT.md),
+        the [Community Rules](https://github.com/GND-0/.github/blob/main/COMMUNITY_RULES.md) and [MEMBERSHIP.md](https://github.com/GND-0/.github/blob/main/MEMBERSHIP.md).
+        **Don't post your phone number or roll number here.** We'll verify you through your institute email if needed.
+  - type: input
+    id: name
+    attributes:
+      label: Full name
+    validations:
+      required: true
+  - type: dropdown
+    id: year
+    attributes:
+      label: Year of study
+      options: ["1st year", "2nd year", "3rd year", "4th year", "M.Tech / PhD", "Faculty / staff", "Alumni"]
+    validations:
+      required: true
+  - type: input
+    id: branch
+    attributes:
+      label: Branch / department
+      placeholder: "ECE / CSE / DSAI / ..."
+    validations:
+      required: true
+  - type: dropdown
+    id: interests
+    attributes:
+      label: Interests
+      multiple: true
+      options:
+        - Digital design / RTL
+        - Verification
+        - Physical design
+        - Analog / mixed-signal
+        - FPGA
+        - Computer architecture / RISC-V
+        - Website / tooling
+        - Events / outreach
+    validations:
+      required: true
+  - type: input
+    id: intro
+    attributes:
+      label: Link to your introduction post in Discussions
+      placeholder: "https://github.com/orgs/GND-0/discussions/..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: Confirmation
+      options:
+        - label: I am a current IIIT Dharwad student, faculty, staff member or alumnus.
+          required: true
+        - label: I have enabled two-factor authentication on my GitHub account.
+          required: true
+        - label: I agree to follow the Code of Conduct and Community Rules.
+          required: true

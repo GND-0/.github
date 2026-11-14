@@ -1,0 +1,37 @@
+title: "[Proposal] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For **club-level** decisions: rules, new event series, budget, governance. See [GOVERNANCE.md](https://github.com/GND-0/.github/blob/main/GOVERNANCE.md#how-decisions-are-made).
+        Club-level proposals stay open **7 days**; governance changes stay open **14 days**.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Who is affected? What changes in rules, repos, money or time?
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      placeholder: "@handle"
+    validations:
+      required: true

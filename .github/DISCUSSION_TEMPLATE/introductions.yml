@@ -1,0 +1,40 @@
+title: "👋 Hi, I'm "
+labels: ["introduction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Welcome to GND_0! Tell us a bit about yourself. **Don't share phone numbers or roll numbers.**
+  - type: input
+    id: who
+    attributes:
+      label: Name, year and branch
+      placeholder: "Asha, 2nd year ECE"
+    validations:
+      required: true
+  - type: textarea
+    id: interests
+    attributes:
+      label: What are you interested in?
+      placeholder: "RTL design, RISC-V, getting my first chip taped out..."
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Where are you on the roadmap?
+      options:
+        - "Just starting: what's a flip-flop? 🙂"
+        - "Comfortable with digital logic"
+        - "I can write and simulate Verilog"
+        - "I've done verification / FPGA projects"
+        - "I've worked with synthesis / P&R / layout"
+        - "Industry / alumni"
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: One thing you'd like to learn or build this semester
+    validations:
+      required: true

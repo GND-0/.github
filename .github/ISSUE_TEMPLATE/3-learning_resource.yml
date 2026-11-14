@@ -1,0 +1,42 @@
+name: 📚 Learning material / tutorial
+description: Propose or request a tutorial, lab, cheat-sheet or resource for the learning roadmap.
+title: "[Learn]: "
+labels: ["type: docs", "area: learning", "status: needs triage"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Request or contribution?
+      options:
+        - I want to write this
+        - I'm requesting that someone write this
+        - Suggesting an external resource to add to the roadmap
+    validations:
+      required: true
+  - type: dropdown
+    id: track
+    attributes:
+      label: Roadmap stage
+      options:
+        - 0 · Foundations (digital logic, Linux, Git)
+        - 1 · HDL (Verilog / SystemVerilog)
+        - 2 · Verification
+        - 3 · FPGA prototyping
+        - 4 · RTL-to-GDS / physical design
+        - 5 · Analog & custom layout
+        - 6 · Architecture / RISC-V
+        - 7 · Careers & interview prep
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Topic and outline
+      description: What will a learner be able to do after this? Include a link if it's an external resource.
+    validations:
+      required: true
+  - type: input
+    id: level
+    attributes:
+      label: Target level
+      placeholder: "Beginner / Intermediate / Advanced"

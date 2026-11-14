@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ❓ Ask a question
+    url: https://github.com/orgs/GND-0/discussions/categories/q-a
+    about: Questions about Verilog, tools, labs or concepts go to Discussions → Q&A, not Issues.
+  - name: 💡 Propose an idea or project
+    url: https://github.com/orgs/GND-0/discussions/categories/ideas
+    about: Early-stage ideas, workshops and project pitches start in Discussions.
+  - name: 🔐 Report a security vulnerability
+    url: https://github.com/GND-0/.github/blob/main/SECURITY.md
+    about: Please report security issues privately, never in a public issue.
+  - name: 🛡️ Report a Code of Conduct concern
+    url: https://github.com/GND-0/.github/blob/main/CODE_OF_CONDUCT.md#reporting
+    about: Conduct reports are handled privately by the Conduct Committee.

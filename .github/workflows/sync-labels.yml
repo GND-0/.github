@@ -1,0 +1,36 @@
+name: Sync labels
+
+# Keeps this repository's labels in line with labels.yml.
+# Org-wide syncing is done by the admin setup script (needs an owner token).
+on:
+  push:
+    branches: [main]
+    paths: [labels.yml, .github/workflows/sync-labels.yml]
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pyyaml
+      - name: Apply labels from labels.yml
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import os, subprocess, yaml
+          labels = yaml.safe_load(open("labels.yml"))
+          repo = os.environ["REPO"]
+          for l in labels:
+              subprocess.run(
+                  ["gh", "label", "create", l["name"], "--repo", repo,
+                   "--color", l["color"], "--description", l.get("description", ""), "--force"],
+                  check=True)
+              print("✔", l["name"])
+          PY

@@ -1,0 +1,41 @@
+name: 🎤 Event / workshop
+description: Plan a workshop, talk, study circle, hackathon or industry session.
+title: "[Event]: "
+labels: ["type: event", "status: needs triage"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Event title
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options: ["Workshop (hands-on)", "Talk / guest lecture", "Study circle (recurring)", "Hackathon / design contest", "Tapeout cohort", "Industry visit", "Other"]
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Learning outcome
+      description: After this event, attendees will be able to...
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Proposed date(s) and duration
+  - type: textarea
+    id: needs
+    attributes:
+      label: Requirements
+      description: Venue/lab, tools to pre-install, hardware (FPGA boards), budget, speaker, permissions
+  - type: input
+    id: owner
+    attributes:
+      label: Owner(s)
+      placeholder: "@handle"
+    validations:
+      required: true

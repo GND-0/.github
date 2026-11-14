@@ -1,0 +1,56 @@
+name: RTL CI
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rtl:
+    name: Lint · Simulate · Synthesise
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install open-source EDA tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq iverilog verilator yosys
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install cocotb
+        run: pip install -r requirements.txt
+
+      - name: Lint (Verilator)
+        run: make lint
+
+      - name: Simulate (Icarus self-checking testbench)
+        run: make sim
+
+      - name: cocotb tests
+        run: make cocotb
+
+      - name: Synthesise (Yosys)
+        run: make synth
+
+      - name: Upload waveforms and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rtl-build-${{ github.run_number }}
+          path: |
+            build/
+            tb/cocotb/results.xml
+          retention-days: 14

@@ -1,0 +1,49 @@
+title: "[Project] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Proposals are reviewed by the Domain Lead and Core Team. If there's no objection after **7 days** and a maintainer is committed, a repository is created from `rtl-project-template`.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What will be built? (e.g. "A pipelined RV32I core with cocotb tests, targeting a Tiny Tapeout tile")
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      options: ["Digital design", "Verification", "Physical design / tapeout", "Analog", "FPGA", "Tooling / web", "Learning material"]
+    validations:
+      required: true
+  - type: textarea
+    id: milestones
+    attributes:
+      label: Milestones
+      placeholder: |
+        - M1 (week 2): spec + block diagram
+        - M2 (week 5): RTL + unit tests passing
+        - M3 (week 8): synthesis + demo
+    validations:
+      required: true
+  - type: textarea
+    id: team
+    attributes:
+      label: Team
+      description: Proposed maintainer(s) and contributors, with the help you need (mentors, hardware, compute).
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Suggested repository name
+      placeholder: "rtl-riscv-rv32i"
+  - type: dropdown
+    id: license
+    attributes:
+      label: License
+      options: ["Apache-2.0", "MIT", "CERN-OHL-S-2.0", "CC-BY-4.0 (docs)"]
+    validations:
+      required: true

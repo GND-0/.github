@@ -1,0 +1,22 @@
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: A project, workshop, collaboration or improvement to the club.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: Who benefits and what would they learn?
+    validations:
+      required: true
+  - type: dropdown
+    id: help
+    attributes:
+      label: Are you willing to lead it?
+      options: ["Yes", "Yes, with a co-lead", "No, just an idea"]
+    validations:
+      required: true
