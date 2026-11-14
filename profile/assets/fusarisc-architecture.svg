@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img" aria-label="FuSaRISC architecture: dual-core lockstep RISC-V CPU subsystem with comparator, watchdog and fault reaction, connected over a parity-checked bus to memory, sensor interfaces, actuators, CAN-FD and debug blocks">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#F2B705"/>
+    </marker>
+    <style>
+      .t{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;fill:#EEE8DA}
+      .h{font-size:17px;font-weight:600}
+      .s{font-size:13px;fill:#C9C3D6}
+      .lbl{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;letter-spacing:2px;fill:#F2B705}
+      .box{fill:#1A1B21;stroke:#F2B705;stroke-opacity:.75;stroke-width:1.5}
+      .grp{fill:none;stroke:#F2B705;stroke-opacity:.45;stroke-width:1.5;stroke-dasharray:6 5}
+      .ln{stroke:#F2B705;stroke-width:2;fill:none}
+    </style>
+  </defs>
+  <rect width="1000" height="600" rx="14" fill="#111216"/>
+
+  <text x="32" y="44" class="t" style="font-size:24px;font-weight:300;letter-spacing:-0.5px">FuSa<tspan fill="#F2B705">RISC</tspan> <tspan class="s" style="font-size:15px">· KAVACH-V functional-safety SoC</tspan></text>
+
+  <!-- CPU subsystem -->
+  <rect x="32" y="70" width="400" height="300" rx="12" class="grp"/>
+  <text x="48" y="92" class="lbl">DCLS RISC-V CPU SUBSYSTEM</text>
+  <rect x="52" y="110" width="168" height="78" rx="8" class="box"/>
+  <text x="136" y="143" text-anchor="middle" class="t h">Primary core</text>
+  <text x="136" y="166" text-anchor="middle" class="t s">RV32IMFC_Zfh</text>
+  <rect x="244" y="110" width="168" height="78" rx="8" class="box"/>
+  <text x="328" y="143" text-anchor="middle" class="t h">Shadow core</text>
+  <text x="328" y="166" text-anchor="middle" class="t s">runs N cycles behind</text>
+  <path d="M220 149 H238" class="ln" marker-end="url(#a)"/>
+  <path d="M136 188 V232" class="ln" marker-end="url(#a)"/>
+  <path d="M328 188 V232" class="ln" marker-end="url(#a)"/>
+  <rect x="52" y="236" width="360" height="62" rx="8" fill="#F2B705"/>
+  <text x="232" y="263" text-anchor="middle" class="t h" style="fill:#111216">Lockstep comparator</text>
+  <text x="232" y="284" text-anchor="middle" class="t s" style="fill:#3A3420">flags any mismatch between the cores</text>
+  <text x="232" y="350" text-anchor="middle" class="t s">mismatch → fault reaction</text>
+  <path d="M232 298 V332" class="ln" marker-end="url(#a)"/>
+
+  <!-- Safety -->
+  <rect x="32" y="392" width="400" height="176" rx="12" class="grp"/>
+  <text x="48" y="414" class="lbl">SAFETY &amp; DIAGNOSTICS</text>
+  <rect x="52" y="430" width="168" height="118" rx="8" class="box"/>
+  <text x="136" y="478" text-anchor="middle" class="t h">Watchdog</text>
+  <text x="136" y="500" text-anchor="middle" class="t s">resets a frozen</text>
+  <text x="136" y="518" text-anchor="middle" class="t s">controller</text>
+  <rect x="244" y="430" width="168" height="118" rx="8" class="box"/>
+  <text x="328" y="478" text-anchor="middle" class="t h">Fault reaction</text>
+  <text x="328" y="500" text-anchor="middle" class="t s">forces GPIOs to a</text>
+  <text x="328" y="518" text-anchor="middle" class="t s">safe state</text>
+
+  <!-- Bus -->
+  <path d="M432 220 H478" class="ln" marker-end="url(#a)"/>
+  <path d="M432 489 H478" class="ln" marker-end="url(#a)"/>
+  <rect x="482" y="70" width="84" height="498" rx="10" class="box"/>
+  <text x="524" y="300" text-anchor="middle" class="t h">Bus</text>
+  <text x="524" y="324" text-anchor="middle" class="t s">parity</text>
+  <text x="524" y="342" text-anchor="middle" class="t s">checked</text>
+
+  <!-- Peripherals -->
+  <g>
+    <path d="M566 117 H602" class="ln" marker-end="url(#a)"/>
+    <rect x="606" y="76" width="362" height="82" rx="8" class="box"/>
+    <text x="626" y="110" class="t h">Memory</text>
+    <text x="626" y="134" class="t s">Dual-bank flash · ECC SRAM (corrects bit-flips)</text>
+
+    <path d="M566 216 H602" class="ln" marker-end="url(#a)"/>
+    <rect x="606" y="175" width="362" height="82" rx="8" class="box"/>
+    <text x="626" y="209" class="t h">Sensor interfaces</text>
+    <text x="626" y="233" class="t s">ADC · SPI · I²C</text>
+
+    <path d="M566 315 H602" class="ln" marker-end="url(#a)"/>
+    <rect x="606" y="274" width="362" height="82" rx="8" class="box"/>
+    <text x="626" y="308" class="t h">Actuators</text>
+    <text x="626" y="332" class="t s">32 GPIO · PWM</text>
+
+    <path d="M566 414 H602" class="ln" marker-end="url(#a)"/>
+    <rect x="606" y="373" width="362" height="82" rx="8" class="box"/>
+    <text x="626" y="407" class="t h">Network &amp; updates</text>
+    <text x="626" y="431" class="t s">CAN-FD controller · firmware over CAN-FD</text>
+
+    <path d="M566 513 H602" class="ln" marker-end="url(#a)"/>
+    <rect x="606" y="472" width="362" height="82" rx="8" class="box"/>
+    <text x="626" y="506" class="t h">Debug &amp; data</text>
+    <text x="626" y="530" class="t s">UART logging · DMA engine</text>
+  </g>
+</svg>

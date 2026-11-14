@@ -38,7 +38,7 @@ Breaking a rule usually earns a friendly reminder. Repeated or deliberate violat
 
 ## 🛠️ Working on code and designs
 
-15. **No direct pushes to `main`.** All changes go through a pull request with at least one review (see [CONTRIBUTING.md](CONTRIBUTING.md)).
+15. **No direct pushes to `main`.** All changes go through a pull request. Ask for a review before merging anything non-trivial (see [CONTRIBUTING.md](CONTRIBUTING.md)).
 16. **One PR = one change.** Keep pull requests focused and small enough to review in about 15 minutes.
 17. **CI must pass.** Don't merge red builds. Don't disable checks to get green.
 18. **Claim before you code.** Comment on an issue to have it assigned before you start, so two people don't do the same work. Unanswered claims expire after **7 days** of silence.

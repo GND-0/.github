@@ -72,7 +72,8 @@ Example: `feat(alu): add signed overflow detection`
 - Keep it small. Big changes should be split into a series of PRs.
 
 ### 5. Review
-- Every PR needs **at least 1 approving review** from a maintainer of that repo. Changes to rules, governance or CI need **2**.
+- Every change goes through a PR. GitHub doesn't force an approval, so authors can merge their own PRs, but **ask for at least 1 review** from a maintainer before merging anything non-trivial. Changes to rules, governance or CI should get **2** reviews.
+- Maintainers may self-merge small fixes (typos, docs, broken links) without review.
 - Reviewers aim to respond within **3 days**. Ping politely in the PR if it's been longer.
 - Address feedback with new commits (don't force-push during review). The maintainer will **squash-merge** when ready.
 
