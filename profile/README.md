@@ -32,7 +32,7 @@ A student community at IIIT Dharwad for VLSI design and semiconductors.
 | | Chip | Process | Status |
 |---|---|---|---|
 | 01 | [**SIDHARUD1**](#-tape-out-01--sidharud1-g0sdh3201): RISC-V microcontroller / smart GPIO expander | GlobalFoundries GF180MCU, 180 nm | ✅ Silicon received and validated |
-| 02 | [**FuSaRISC**](#-tape-out-02--fusarisc-kavach-v): functional-safety SoC for vehicles | 22 nm | 🛠️ In progress |
+| 02 | [**FuSaRISC**](#-tape-out-02--fusarisc-kavach-v): functional-safety SoC for vehicles | 28 nm | 🛠️ In progress |
 
 ### 🥇 Tape-out 01 · SIDHARUD1 (G0SDH3201)
 
@@ -78,7 +78,7 @@ It is named after **Siddharoodha Swami of Hubballi**. The part number reads **G0
 
 <img src="https://raw.githubusercontent.com/GND-0/.github/main/profile/assets/fusarisc-architecture.svg" alt="FuSaRISC block diagram: dual-core lockstep RISC-V subsystem with comparator, watchdog and fault reaction, connected over a parity-checked bus to ECC memory, sensor interfaces, actuators, CAN-FD and debug blocks" width="860" />
 
-**KAVACH-V: Kernel for Automotive Vigilance, Armored Control Hardware.** FuSaRISC is a RISC-V system-on-chip meant to be the high-reliability brain of software-defined vehicles. It moves safety checks out of software and into the silicon, and is being designed toward **ISO 26262 ASIL-D** practices. It is our second tape-out, at **22 nm**, sponsored by the **VLSI Society of India**.
+**KAVACH-V: Kernel for Automotive Vigilance, Armored Control Hardware.** FuSaRISC is a RISC-V system-on-chip meant to be the high-reliability brain of software-defined vehicles. It moves safety checks out of software and into the silicon, and is being designed toward **ISO 26262 ASIL-D** practices. It is our second tape-out, at **28 nm**, sponsored by the **VLSI Society of India**.
 
 | Feature | What it does |
 |---|---|
@@ -95,7 +95,7 @@ It is named after **Siddharoodha Swami of Hubballi**. The part number reads **G0
 
 ## 🏆 Highlights
 
-- **2 chip tape-outs** by students: 180 nm (SIDHARUD1) and 22 nm (FuSaRISC)
+- **2 chip tape-outs** by students: 180 nm (SIDHARUD1) and 28 nm (FuSaRISC)
 - **10+ events:** *Hack Maze 2025* (48-hour hackathon), *Hack Maze 2.0* (2026) with participants from across India, an RTL-to-GDS workshop, and VLSI test and DFT training
 - **Industry EDA tools** from Synopsys, Cadence, Siemens and Keysight, accessed through ChipIN at C-DAC under the **DLI scheme**
 - Guest talks and alumni sessions bridging academia and industry
